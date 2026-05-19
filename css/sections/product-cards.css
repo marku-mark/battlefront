@@ -1,0 +1,244 @@
+/* ═══════════════════════════════════════════════════════════════
+   product-cards.css
+   Large product card grid used in New Arrivals and similar sections
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── PRODUCTS GRID ───────────────────────────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ─── LARGE PRODUCT CARD ──────────────────────────────────────── */
+.product-card-lg {
+  background: var(--color-white);
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-lg:hover {
+  border-color: var(--color-text);
+  box-shadow: 0 8px 28px rgba(44, 62, 80, 0.1);
+}
+
+/* ─── CARD IMAGE ──────────────────────────────────────────────── */
+.card-img-lg {
+  position: relative;
+  background: var(--color-surface);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  border-radius: 12px 12px 0 0;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  transition: all 0.2s ease;
+}
+
+.product-card-lg:hover .wishlist-btn {
+  opacity: 1;
+}
+
+.wishlist-btn.active {
+  color: var(--color-cta);
+  border-color: var(--color-cta);
+  opacity: 1;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ─── CARD BODY ───────────────────────────────────────────────── */
+.card-body-lg {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card-brand {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-name-lg {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  min-height: 40px;
+}
+
+/* ─── RATINGS ─────────────────────────────────────────────────── */
+.stars-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.stars {
+  color: #F39C12;
+}
+
+.reviews {
+  color: var(--color-text-muted);
+}
+
+/* ─── PRICE ROW ───────────────────────────────────────────────── */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-current {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-cta);
+}
+
+.save-badge {
+  background: #1A3A1A;
+  color: #4CAF50;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+/* ─── CARD ACTIONS ────────────────────────────────────────────── */
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn-quick {
+  padding: 8px 12px;
+  border: 1.5px solid var(--color-text);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: var(--font);
+}
+
+.btn-quick:hover {
+  background: var(--color-surface);
+}
+
+.btn-cart-sm {
+  padding: 8px 12px;
+  background: var(--color-cta);
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: var(--font);
+}
+
+.btn-cart-sm:hover {
+  background: var(--color-cta-hover);
+}
+
+.warranty-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border);
+  margin-top: 4px;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card-body-lg {
+    padding: 10px 12px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .card-actions {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .card-img-lg {
+    font-size: 40px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

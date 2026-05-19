@@ -1,0 +1,182 @@
+/* ═══════════════════════════════════════════════════════════════
+   base.css
+   Design tokens (CSS variables), reset, and global base styles
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ─── DESIGN TOKENS ───────────────────────────────────────────── */
+:root {
+  --color-bg: #121212;
+  --color-surface: #1E1E1E;
+  --color-text: #D1D1D1;
+  --color-text-muted: #7F8C8D;
+  --color-cta: #E30613;
+  --color-cta-hover: #B8050F;
+  --color-white: #1E1E1E;
+  --color-border: #2A2A2A;
+  --color-accent-dark: #D1D1D1;
+  --font: 'Inter', sans-serif;
+}
+
+/* ─── RESET ───────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── BASE ELEMENTS ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Any table or wide fixed element gets scroll containment */
+table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+/* ─── GLOBAL BUTTONS ──────────────────────────────────────────── */
+.btn-primary {
+  background: var(--color-cta);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  font-family: var(--font);
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:hover {
+  background: var(--color-cta-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid var(--color-text);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  font-family: var(--font);
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface);
+  transform: translateY(-1px);
+}
+
+/* ─── SECTION WRAPPER ─────────────────────────────────────────── */
+.section {
+  padding: 60px 24px;
+}
+
+.section-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.view-all {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.view-all:hover {
+  color: var(--color-text);
+}
+
+/* ─── SCROLLABLE CONTAINERS — THIN RED ACCENT SCROLLBAR ───────── */
+.sulit-scroll-wrap,
+.brands-scroll-wrap,
+.nav-inner,
+.overflow-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cta) var(--color-surface);
+}
+
+.sulit-scroll-wrap::-webkit-scrollbar,
+.brands-scroll-wrap::-webkit-scrollbar,
+.nav-inner::-webkit-scrollbar,
+.overflow-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.sulit-scroll-wrap::-webkit-scrollbar-track,
+.brands-scroll-wrap::-webkit-scrollbar-track,
+.nav-inner::-webkit-scrollbar-track,
+.overflow-scroll::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+.sulit-scroll-wrap::-webkit-scrollbar-thumb,
+.brands-scroll-wrap::-webkit-scrollbar-thumb,
+.nav-inner::-webkit-scrollbar-thumb,
+.overflow-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-cta);
+  border-radius: 99px;
+}
+
+/* Scroll snap on cards inside horizontal scroll areas */
+.sulit-scroll .product-card-sm,
+.brands-row .brand-pill-lg {
+  scroll-snap-align: start;
+}

@@ -1,0 +1,74 @@
+/* ═══════════════════════════════════════════════════════════════
+   categories.css
+   Category icon grid and active card state
+   ═══════════════════════════════════════════════════════════════ */
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.cat-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+}
+
+.cat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.1);
+  border-color: var(--color-text);
+}
+
+/* Active state (from battlefront-ext.css) */
+.cat-card.active {
+  border-color: var(--color-cta);
+  background: rgba(227, 6, 19, 0.06);
+}
+
+.cat-card.active .cat-name {
+  color: var(--color-cta);
+}
+
+.cat-emoji {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.cat-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Horizontal scroll on mobile */
+  .cat-grid {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+
+  .cat-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cat-card {
+    min-width: 88px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}

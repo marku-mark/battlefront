@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════════════
+   store-locator.css
+   Store locator card grid with directions button
+   ═══════════════════════════════════════════════════════════════ */
+
+.store-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.store-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-card:hover {
+  border-color: var(--color-cta);
+  box-shadow: 0 4px 20px rgba(227, 6, 19, 0.1);
+}
+
+.store-card-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.store-card-name i {
+  color: var(--color-cta);
+}
+
+.store-card-detail {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.45;
+}
+
+.store-card-detail i {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.store-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 9px 16px;
+  background: var(--color-cta);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  align-self: flex-start;
+}
+
+.store-directions-btn:hover {
+  background: var(--color-cta-hover);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .store-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

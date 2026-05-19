@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════════════
+   util-bar.css
+   Top utility / announcement bar
+   ═══════════════════════════════════════════════════════════════ */
+
+.util-bar {
+  background: #0A0A0A;
+  color: #D1D1D1;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.util-bar .inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.util-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.util-badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.util-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.util-right a {
+  color: #D1D1D1;
+  opacity: 0.85;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.util-right a:hover {
+  opacity: 1;
+}
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lang-toggle span {
+  padding: 2px 7px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.2s ease;
+}
+
+.lang-toggle span.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.lang-toggle span:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .util-bar {
+    height: auto;
+    min-height: 36px;
+    padding: 4px 0;
+  }
+
+  .util-bar .inner {
+    gap: 8px;
+    padding: 0 16px;
+    flex-wrap: wrap;
+  }
+
+  .util-left .util-shipping {
+    display: none;
+  }
+
+  .util-right .hide-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .util-bar .inner {
+    padding: 0 12px;
+  }
+
+  .util-right {
+    gap: 10px;
+  }
+
+  .lang-toggle {
+    display: none;
+  }
+}

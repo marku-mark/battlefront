@@ -1,0 +1,54 @@
+/* ═══════════════════════════════════════════════════════════════
+   index.css  —  Battlefront Computer Trading
+   Master entry point. Link only this file in your HTML:
+   <link rel="stylesheet" href="css/index.css">
+
+   Directory structure:
+     css/
+     ├── index.css                  ← you are here
+     ├── base.css                   ← tokens, reset, global utilities
+     ├── layout/
+     │   ├── util-bar.css
+     │   ├── header.css
+     │   └── footer.css
+     ├── sections/
+     │   ├── hero.css
+     │   ├── trust-bar.css
+     │   ├── categories.css
+     │   ├── sulit-picks.css
+     │   ├── promo-banners.css
+     │   ├── product-cards.css
+     │   ├── brands.css
+     │   └── trust-section.css
+     └── components/
+         ├── disclaimer-modal.css
+         ├── auth-modal.css
+         ├── chatbot.css
+         ├── store-locator.css
+         └── cart-toast.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. Foundation ─────────────────────────────────────────────── */
+@import './base.css';
+
+/* ── 2. Layout chrome ──────────────────────────────────────────── */
+@import './layout/util-bar.css';
+@import './layout/header.css';
+@import './layout/footer.css';
+
+/* ── 3. Page sections ──────────────────────────────────────────── */
+@import './sections/hero.css';
+@import './sections/trust-bar.css';
+@import './sections/categories.css';
+@import './sections/sulit-picks.css';
+@import './sections/promo-banners.css';
+@import './sections/product-cards.css';
+@import './sections/brands.css';
+@import './sections/trust-section.css';
+
+/* ── 4. Overlays & interactive components ───────────────────────── */
+@import './components/disclaimer-modal.css';
+@import './components/auth-modal.css';
+@import './components/chatbot.css';
+@import './components/store-locator.css';
+@import './components/cart-toast.css';

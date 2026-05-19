@@ -1,0 +1,244 @@
+/* ═══════════════════════════════════════════════════════════════
+   auth-modal.css
+   Login / register modal with tab switching and form elements
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── OVERLAY ─────────────────────────────────────────────────── */
+.auth-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  backdrop-filter: blur(2px);
+}
+
+.auth-overlay.open {
+  display: block;
+}
+
+/* ─── MODAL SHELL ─────────────────────────────────────────────── */
+.auth-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  z-index: 1200;
+  width: 100%;
+  max-width: 440px;
+  padding: 0 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+
+.auth-modal.open {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.auth-modal-inner {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── CLOSE BUTTON ────────────────────────────────────────────── */
+.auth-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auth-close-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ─── BRAND ROW ───────────────────────────────────────────────── */
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+/* ─── TABS ────────────────────────────────────────────────────── */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--color-bg);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.auth-tab-btn {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: var(--font);
+}
+
+.auth-tab-btn.active {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.auth-panel {
+  display: none;
+}
+
+.auth-panel.active {
+  display: block;
+}
+
+/* ─── FORM ELEMENTS ───────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.form-input-wrap {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--color-text);
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--color-cta);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-input-wrap .form-input {
+  padding-right: 40px;
+}
+
+.input-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 17px;
+  transition: color 0.2s ease;
+}
+
+.input-eye:hover {
+  color: var(--color-text);
+}
+
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+  padding: 12px;
+}
+
+/* ─── DIVIDER ─────────────────────────────────────────────────── */
+.auth-divider {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 16px 0;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 20px);
+  height: 1px;
+  background: var(--color-border);
+}
+
+.auth-divider::before { left: 0; }
+.auth-divider::after  { right: 0; }
+
+/* ─── FOOTER TEXT ─────────────────────────────────────────────── */
+.auth-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.auth-footer-text a {
+  color: var(--color-cta);
+  font-weight: 500;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .auth-modal {
+    padding: 0 12px;
+  }
+
+  .auth-modal-inner {
+    padding: 24px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

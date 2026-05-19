@@ -1,0 +1,116 @@
+/* ═══════════════════════════════════════════════════════════════
+   promo-banners.css
+   Split promotional banner cards (dark + light variants)
+   ═══════════════════════════════════════════════════════════════ */
+
+.promo-section {
+  padding: 0 24px 60px;
+}
+
+.promo-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.promo-card {
+  border-radius: 16px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.promo-dark {
+  background: #0A0A0A;
+  color: #D1D1D1;
+}
+
+.promo-light {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.promo-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.promo-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.promo-sub {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.promo-dark .btn-primary {
+  align-self: flex-start;
+}
+
+.btn-outline-dark {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 24px;
+  border: 2px solid var(--color-text);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: var(--font);
+  min-width: 100px;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(44, 62, 80, 0.08);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .promo-section {
+    padding: 0 16px 36px;
+  }
+
+  .promo-inner {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .promo-card {
+    padding: 28px 24px;
+    gap: 12px;
+  }
+
+  .promo-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-section {
+    padding: 0 12px 28px;
+  }
+
+  .promo-card {
+    padding: 22px 18px;
+  }
+
+  .promo-title {
+    font-size: 20px;
+  }
+}

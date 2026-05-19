@@ -1,0 +1,39 @@
+/* ═══════════════════════════════════════════════════════════════
+   brands.css
+   Horizontal brand-pill scroll row
+   ═══════════════════════════════════════════════════════════════ */
+
+.brands-scroll-wrap {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.brands-scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.brands-row {
+  display: flex;
+  gap: 10px;
+  padding: 4px 0 12px;
+  width: max-content;
+}
+
+.brand-pill-lg {
+  padding: 9px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.brand-pill-lg:hover {
+  background: var(--color-text);
+  color: #FDFDFD;
+  border-color: var(--color-text);
+}

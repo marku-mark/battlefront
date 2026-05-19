@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Battlefront Computer Trading</title>
-  <link rel="icon" type="image/png" href="battlefronticon.png">
+  <link rel="icon" type="image/png" href="assets/icons/battlefronticon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-  <link rel="stylesheet" href="battlefront.css">
-  <link rel="stylesheet" href="battlefront-ext.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -20,8 +19,11 @@
     <div class="disclaimer-box">
       <div class="disclaimer-icon"><i class="ti ti-alert-triangle"></i></div>
       <h2>Disclaimer</h2>
-      <p>This website is provided for informational and demonstration purposes only. All products, prices, and promotions displayed are subject to change without notice. We do not guarantee the accuracy or completeness of any information on this site.</p>
-      <p style="margin-top:10px;">By continuing, you agree to our <a href="#" style="color:var(--color-cta);">Terms of Service</a> and <a href="#" style="color:var(--color-cta);">Privacy Policy</a>.</p>
+      <p>This website is provided for informational and demonstration purposes only. All products, prices, and
+        promotions displayed are subject to change without notice. We do not guarantee the accuracy or completeness of
+        any information on this site.</p>
+      <p style="margin-top:10px;">By continuing, you agree to our <a href="#" style="color:var(--color-cta);">Terms of
+          Service</a> and <a href="#" style="color:var(--color-cta);">Privacy Policy</a>.</p>
       <button class="btn-primary" id="disclaimerOkBtn" style="width:100%;margin-top:20px;justify-content:center;">
         <i class="ti ti-check"></i> I Understand, Continue
       </button>
@@ -33,7 +35,8 @@
   ══════════════════════════════════════════════════════════ -->
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
-      <img src="battlefronticon.png" alt="BCT" style="height:36px;width:36px;object-fit:contain;border-radius:50%;">
+      <img src="assets/icons/battlefronticon.png" alt="BCT"
+        style="height:36px;width:36px;object-fit:contain;border-radius:50%;">
       <span style="font-weight:700;font-size:15px;letter-spacing:1px;">BATTLEFRONT</span>
       <button class="drawer-close" aria-label="Close menu"><i class="ti ti-x"></i></button>
     </div>
@@ -49,9 +52,12 @@
       <a href="#">Track Order</a>
       <a href="#store-locator">Store Locator</a>
     </nav>
-    <div style="margin-top:24px;border-top:1px solid var(--color-border);padding-top:20px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-primary" data-auth-open="login" style="justify-content:center;"><i class="ti ti-login"></i> Login</button>
-      <button class="btn-secondary" data-auth-open="register" style="justify-content:center;"><i class="ti ti-user-plus"></i> Register</button>
+    <div
+      style="margin-top:24px;border-top:1px solid var(--color-border);padding-top:20px;display:flex;flex-direction:column;gap:10px;">
+      <button class="btn-primary" data-auth-open="login" style="justify-content:center;"><i class="ti ti-login"></i>
+        Login</button>
+      <button class="btn-secondary" data-auth-open="register" style="justify-content:center;"><i
+          class="ti ti-user-plus"></i> Register</button>
     </div>
   </div>
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -66,9 +72,11 @@
         <span class="util-badge">📦 Nationwide Delivery</span>
       </div>
       <div class="util-right">
-        <a href="#store-locator" aria-label="Store locator"><i class="ti ti-map-pin"></i> <span class="hide-sm">Store Locator</span></a>
+        <a href="#store-locator" aria-label="Store locator"><i class="ti ti-map-pin"></i> <span class="hide-sm">Store
+            Locator</span></a>
         <a href="#" aria-label="Track order"><i class="ti ti-package"></i> <span class="hide-sm">Track Order</span></a>
-        <a href="#" aria-label="Live chat" id="utilLiveChat"><i class="ti ti-message-circle"></i> <span class="hide-sm">Live Chat</span></a>
+        <a href="#" aria-label="Live chat" id="utilLiveChat"><i class="ti ti-message-circle"></i> <span
+            class="hide-sm">Live Chat</span></a>
         <div class="lang-toggle">
           <span class="active">EN</span>
           <span>PH</span>
@@ -87,12 +95,14 @@
           <span></span><span></span><span></span>
         </button>
         <a href="#" class="logo" style="display:flex;align-items:center;gap:8px;">
-          <img src="battlefronticon.png" alt="BCT" style="height:36px;width:36px;object-fit:contain;border-radius:50%;">
+          <img src="assets/icons/battlefronticon.png" alt="BCT"
+            style="height:36px;width:36px;object-fit:contain;border-radius:50%;">
           <span>BATTLEFRONT</span>
         </a>
       </div>
       <div class="search-wrap">
-        <input type="text" class="search-bar" placeholder="Search products, brands, specs..." aria-label="Search products">
+        <input type="text" class="search-bar" placeholder="Search products, brands, specs..."
+          aria-label="Search products">
         <button class="search-btn" aria-label="Search"><i class="ti ti-search"></i></button>
       </div>
       <div class="header-icons">
@@ -221,18 +231,30 @@
         <a href="#" class="view-all">All Categories <i class="ti ti-arrow-right"></i></a>
       </div>
       <div class="cat-grid">
-        <div class="cat-card" data-category="Processors"><span class="cat-emoji">🔲</span><span class="cat-name">Processors</span></div>
-        <div class="cat-card" data-category="Graphics Cards"><span class="cat-emoji">🎮</span><span class="cat-name">Graphics Cards</span></div>
-        <div class="cat-card" data-category="Motherboards"><span class="cat-emoji">🖥️</span><span class="cat-name">Motherboards</span></div>
-        <div class="cat-card" data-category="Memory"><span class="cat-emoji">💾</span><span class="cat-name">Memory</span></div>
-        <div class="cat-card" data-category="Storage"><span class="cat-emoji">💿</span><span class="cat-name">Storage</span></div>
-        <div class="cat-card" data-category="PC Cases"><span class="cat-emoji">🗄️</span><span class="cat-name">PC Cases</span></div>
-        <div class="cat-card" data-category="Cooling"><span class="cat-emoji">❄️</span><span class="cat-name">Cooling</span></div>
-        <div class="cat-card" data-category="Power Supply"><span class="cat-emoji">⚡</span><span class="cat-name">Power Supply</span></div>
-        <div class="cat-card" data-category="Monitors"><span class="cat-emoji">🖥</span><span class="cat-name">Monitors</span></div>
-        <div class="cat-card" data-category="Keyboards"><span class="cat-emoji">⌨️</span><span class="cat-name">Keyboards</span></div>
-        <div class="cat-card" data-category="Laptops"><span class="cat-emoji">💻</span><span class="cat-name">Laptops</span></div>
-        <div class="cat-card" data-category="Peripherals"><span class="cat-emoji">🖱️</span><span class="cat-name">Peripherals</span></div>
+        <div class="cat-card" data-category="Processors"><span class="cat-emoji">🔲</span><span
+            class="cat-name">Processors</span></div>
+        <div class="cat-card" data-category="Graphics Cards"><span class="cat-emoji">🎮</span><span
+            class="cat-name">Graphics Cards</span></div>
+        <div class="cat-card" data-category="Motherboards"><span class="cat-emoji">🖥️</span><span
+            class="cat-name">Motherboards</span></div>
+        <div class="cat-card" data-category="Memory"><span class="cat-emoji">💾</span><span
+            class="cat-name">Memory</span></div>
+        <div class="cat-card" data-category="Storage"><span class="cat-emoji">💿</span><span
+            class="cat-name">Storage</span></div>
+        <div class="cat-card" data-category="PC Cases"><span class="cat-emoji">🗄️</span><span class="cat-name">PC
+            Cases</span></div>
+        <div class="cat-card" data-category="Cooling"><span class="cat-emoji">❄️</span><span
+            class="cat-name">Cooling</span></div>
+        <div class="cat-card" data-category="Power Supply"><span class="cat-emoji">⚡</span><span class="cat-name">Power
+            Supply</span></div>
+        <div class="cat-card" data-category="Monitors"><span class="cat-emoji">🖥</span><span
+            class="cat-name">Monitors</span></div>
+        <div class="cat-card" data-category="Keyboards"><span class="cat-emoji">⌨️</span><span
+            class="cat-name">Keyboards</span></div>
+        <div class="cat-card" data-category="Laptops"><span class="cat-emoji">💻</span><span
+            class="cat-name">Laptops</span></div>
+        <div class="cat-card" data-category="Peripherals"><span class="cat-emoji">🖱️</span><span
+            class="cat-name">Peripherals</span></div>
       </div>
     </div>
   </section>
@@ -248,7 +270,8 @@
     <div class="sulit-scroll-wrap">
       <div class="sulit-scroll">
         <div class="product-card-sm">
-          <div class="card-img-wrap"><span>🔲</span><span class="brand-pill">AMD</span><span class="sale-badge">SALE</span></div>
+          <div class="card-img-wrap"><span>🔲</span><span class="brand-pill">AMD</span><span
+              class="sale-badge">SALE</span></div>
           <div class="card-body">
             <div class="card-name">AMD Ryzen 5 7600X Desktop Processor 4.7GHz</div>
             <div class="card-prices"><span class="price-new">₱11,495</span><span class="price-old">₱13,995</span></div>
@@ -259,7 +282,8 @@
           </div>
         </div>
         <div class="product-card-sm">
-          <div class="card-img-wrap"><span>🎮</span><span class="brand-pill">MSI</span><span class="sale-badge">SALE</span></div>
+          <div class="card-img-wrap"><span>🎮</span><span class="brand-pill">MSI</span><span
+              class="sale-badge">SALE</span></div>
           <div class="card-body">
             <div class="card-name">MSI GeForce RTX 4060 GAMING X 8GB GDDR6</div>
             <div class="card-prices"><span class="price-new">₱22,995</span><span class="price-old">₱26,500</span></div>
@@ -270,7 +294,9 @@
           </div>
         </div>
         <div class="product-card-sm">
-          <div class="card-img-wrap" style="background:linear-gradient(135deg,#EEF7EE 0%,#D0E8D0 100%)"><span>💾</span><span class="brand-pill">Corsair</span></div>
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#EEF7EE 0%,#D0E8D0 100%)">
+            <span>💾</span><span class="brand-pill">Corsair</span>
+          </div>
           <div class="card-body">
             <div class="card-name">Corsair Vengeance DDR5 32GB (2×16GB) 5600MHz</div>
             <div class="card-prices"><span class="price-new">₱6,995</span></div>
@@ -281,7 +307,9 @@
           </div>
         </div>
         <div class="product-card-sm">
-          <div class="card-img-wrap" style="background:linear-gradient(135deg,#FFF3E0 0%,#FFE0B2 100%)"><span>💿</span><span class="brand-pill">Samsung</span><span class="sale-badge">SALE</span></div>
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#FFF3E0 0%,#FFE0B2 100%)">
+            <span>💿</span><span class="brand-pill">Samsung</span><span class="sale-badge">SALE</span>
+          </div>
           <div class="card-body">
             <div class="card-name">Samsung 990 Pro 2TB NVMe PCIe Gen4 M.2 SSD</div>
             <div class="card-prices"><span class="price-new">₱8,495</span><span class="price-old">₱10,995</span></div>
@@ -292,7 +320,9 @@
           </div>
         </div>
         <div class="product-card-sm">
-          <div class="card-img-wrap" style="background:linear-gradient(135deg,#F3E5F5 0%,#E1BEE7 100%)"><span>⌨️</span><span class="brand-pill">RAKK</span><span class="sale-badge">SALE</span></div>
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#F3E5F5 0%,#E1BEE7 100%)">
+            <span>⌨️</span><span class="brand-pill">RAKK</span><span class="sale-badge">SALE</span>
+          </div>
           <div class="card-body">
             <div class="card-name">RAKK Kimat TKL Wired Mechanical Keyboard — Blue Switch</div>
             <div class="card-prices"><span class="price-new">₱1,295</span><span class="price-old">₱1,695</span></div>
@@ -303,7 +333,9 @@
           </div>
         </div>
         <div class="product-card-sm">
-          <div class="card-img-wrap" style="background:linear-gradient(135deg,#E3F2FD 0%,#BBDEFB 100%)"><span>⚡</span><span class="brand-pill">Seasonic</span></div>
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#E3F2FD 0%,#BBDEFB 100%)">
+            <span>⚡</span><span class="brand-pill">Seasonic</span>
+          </div>
           <div class="card-body">
             <div class="card-name">Seasonic Focus GX-850 850W 80+ Gold Modular PSU</div>
             <div class="card-prices"><span class="price-new">₱7,295</span></div>
@@ -325,13 +357,15 @@
       <div class="promo-card promo-dark">
         <span class="promo-label">Featured Partner</span>
         <div class="promo-title">Powered by MSI.<br>Built to Dominate.</div>
-        <p class="promo-sub">Explore the full MSI lineup — from flagship GeForce RTX graphics cards to MSI Gaming laptops and motherboards.</p>
+        <p class="promo-sub">Explore the full MSI lineup — from flagship GeForce RTX graphics cards to MSI Gaming
+          laptops and motherboards.</p>
         <button class="btn-primary"><i class="ti ti-arrow-right"></i> Shop MSI</button>
       </div>
       <div class="promo-card promo-light">
         <span class="promo-label" style="color:var(--color-text-muted);">PC Builder</span>
         <div class="promo-title">Not sure where to start?<br>Let us help.</div>
-        <p class="promo-sub" style="color:var(--color-text-muted);">Our PC Builder tool picks compatible parts within your budget. Gaming, creative, or workstation — we've got configs for every use case.</p>
+        <p class="promo-sub" style="color:var(--color-text-muted);">Our PC Builder tool picks compatible parts within
+          your budget. Gaming, creative, or workstation — we've got configs for every use case.</p>
         <button class="btn-outline-dark"><i class="ti ti-cpu"></i> Launch PC Builder</button>
       </div>
     </div>
@@ -348,90 +382,125 @@
       </div>
       <div class="products-grid">
         <div class="product-card-lg">
-          <div class="card-img-lg"><span>🔲</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg"><span>🔲</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button></div>
           <div class="card-body-lg">
             <span class="card-brand">Intel</span>
             <div class="card-name-lg">Intel Core i9-14900K 24-Core 3.2GHz Desktop Processor</div>
             <div class="stars-row"><span class="stars">★★★★★</span><span class="reviews">(47 reviews)</span></div>
-            <div class="price-row"><span class="price-current">₱21,995</span><span class="save-badge">Save ₱3,000</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="price-row"><span class="price-current">₱21,995</span><span class="save-badge">Save ₱3,000</span>
+            </div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 100%)"><span>🎮</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 100%)">
+            <span>🎮</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">ASUS</span>
             <div class="card-name-lg">ASUS TUF Gaming GeForce RTX 4070 Ti SUPER OC 16GB</div>
             <div class="stars-row"><span class="stars">★★★★★</span><span class="reviews">(23 reviews)</span></div>
             <div class="price-row"><span class="price-current">₱52,995</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#FFF8E1 0%,#FFECB3 100%)"><span>💻</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#FFF8E1 0%,#FFECB3 100%)">
+            <span>💻</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">Lenovo</span>
             <div class="card-name-lg">Lenovo Legion 5i Gen 9 Intel i7-14700HX RTX 4060 16" FHD 165Hz</div>
             <div class="stars-row"><span class="stars">★★★★☆</span><span class="reviews">(18 reviews)</span></div>
-            <div class="price-row"><span class="price-current">₱69,995</span><span class="save-badge">Save ₱5,000</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="price-row"><span class="price-current">₱69,995</span><span class="save-badge">Save ₱5,000</span>
+            </div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#E8EAF6 0%,#C5CAE9 100%)"><span>🖥</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#E8EAF6 0%,#C5CAE9 100%)">
+            <span>🖥</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">LG</span>
             <div class="card-name-lg">LG UltraGear 27" 4K 144Hz IPS Nano Gaming Monitor — 27GP950</div>
             <div class="stars-row"><span class="stars">★★★★★</span><span class="reviews">(62 reviews)</span></div>
-            <div class="price-row"><span class="price-current">₱34,495</span><span class="save-badge">Save ₱2,500</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="price-row"><span class="price-current">₱34,495</span><span class="save-badge">Save ₱2,500</span>
+            </div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#FCE4EC 0%,#F8BBD0 100%)"><span>🗄️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#FCE4EC 0%,#F8BBD0 100%)">
+            <span>🗄️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">NZXT</span>
             <div class="card-name-lg">NZXT H7 Flow Mid-Tower ATX Case with 3×140mm Fans — White</div>
             <div class="stars-row"><span class="stars">★★★★☆</span><span class="reviews">(34 reviews)</span></div>
             <div class="price-row"><span class="price-current">₱9,495</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#E0F7FA 0%,#B2EBF2 100%)"><span>🖱️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#E0F7FA 0%,#B2EBF2 100%)">
+            <span>🖱️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">Logitech</span>
             <div class="card-name-lg">Logitech G Pro X Superlight 2 DEX Wireless Gaming Mouse 32K DPI</div>
             <div class="stars-row"><span class="stars">★★★★★</span><span class="reviews">(91 reviews)</span></div>
-            <div class="price-row"><span class="price-current">₱6,995</span><span class="save-badge">Save ₱1,000</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="price-row"><span class="price-current">₱6,995</span><span class="save-badge">Save ₱1,000</span>
+            </div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#F3E5F5 0%,#E1BEE7 100%)"><span>❄️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#F3E5F5 0%,#E1BEE7 100%)">
+            <span>❄️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">DeepCool</span>
             <div class="card-name-lg">DeepCool LT720 360mm ARGB AIO Liquid CPU Cooler — Black</div>
             <div class="stars-row"><span class="stars">★★★★☆</span><span class="reviews">(27 reviews)</span></div>
-            <div class="price-row"><span class="price-current">₱5,495</span><span class="save-badge">Save ₱800</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="price-row"><span class="price-current">₱5,495</span><span class="save-badge">Save ₱800</span>
+            </div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
         <div class="product-card-lg">
-          <div class="card-img-lg" style="background:linear-gradient(135deg,#FFF3E0 0%,#FFE0B2 100%)"><span>🖥️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i class="ti ti-heart"></i></button></div>
+          <div class="card-img-lg" style="background:linear-gradient(135deg,#FFF3E0 0%,#FFE0B2 100%)">
+            <span>🖥️</span><button class="wishlist-btn" aria-label="Add to wishlist"><i
+                class="ti ti-heart"></i></button>
+          </div>
           <div class="card-body-lg">
             <span class="card-brand">Gigabyte</span>
             <div class="card-name-lg">Gigabyte Z790 AORUS Elite AX DDR5 ATX Motherboard — LGA1700</div>
             <div class="stars-row"><span class="stars">★★★★★</span><span class="reviews">(15 reviews)</span></div>
             <div class="price-row"><span class="price-current">₱16,995</span></div>
-            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick View</button></div>
+            <div class="card-actions"><button class="btn-cart-sm">Add to Cart</button><button class="btn-quick">Quick
+                View</button></div>
             <div class="warranty-label"><i class="ti ti-shield-check"></i> Battlefront Fix Warranted</div>
           </div>
         </div>
@@ -444,17 +513,27 @@
   ══════════════════════════════════════════════════════════ -->
   <section class="section" style="padding-top:0;">
     <div class="section-inner">
-      <div class="section-header"><h2 class="section-title">Top Brands</h2></div>
+      <div class="section-header">
+        <h2 class="section-title">Top Brands</h2>
+      </div>
       <div class="brands-scroll-wrap">
         <div class="brands-row">
-          <div class="brand-pill-lg">ASUS</div><div class="brand-pill-lg">MSI</div>
-          <div class="brand-pill-lg">Gigabyte</div><div class="brand-pill-lg">AMD</div>
-          <div class="brand-pill-lg">Intel</div><div class="brand-pill-lg">Corsair</div>
-          <div class="brand-pill-lg">Logitech</div><div class="brand-pill-lg">Samsung</div>
-          <div class="brand-pill-lg">WD</div><div class="brand-pill-lg">Cooler Master</div>
-          <div class="brand-pill-lg">RAKK</div><div class="brand-pill-lg">Acer</div>
-          <div class="brand-pill-lg">Dell</div><div class="brand-pill-lg">HP</div>
-          <div class="brand-pill-lg">NZXT</div><div class="brand-pill-lg">DeepCool</div>
+          <div class="brand-pill-lg">ASUS</div>
+          <div class="brand-pill-lg">MSI</div>
+          <div class="brand-pill-lg">Gigabyte</div>
+          <div class="brand-pill-lg">AMD</div>
+          <div class="brand-pill-lg">Intel</div>
+          <div class="brand-pill-lg">Corsair</div>
+          <div class="brand-pill-lg">Logitech</div>
+          <div class="brand-pill-lg">Samsung</div>
+          <div class="brand-pill-lg">WD</div>
+          <div class="brand-pill-lg">Cooler Master</div>
+          <div class="brand-pill-lg">RAKK</div>
+          <div class="brand-pill-lg">Acer</div>
+          <div class="brand-pill-lg">Dell</div>
+          <div class="brand-pill-lg">HP</div>
+          <div class="brand-pill-lg">NZXT</div>
+          <div class="brand-pill-lg">DeepCool</div>
         </div>
       </div>
     </div>
@@ -467,7 +546,8 @@
     <div class="section-inner">
       <div class="section-header">
         <h2 class="section-title"><i class="ti ti-map-pin" style="color:var(--color-cta);"></i> Store Locations</h2>
-        <a href="https://www.google.com/maps/search/Battlefront+Computer+Trading" target="_blank" class="view-all">View on Google Maps <i class="ti ti-external-link"></i></a>
+        <a href="https://www.google.com/maps/search/Battlefront+Computer+Trading" target="_blank" class="view-all">View
+          on Google Maps <i class="ti ti-external-link"></i></a>
       </div>
       <div id="storeCardsContainer" class="store-cards-grid">
         <!-- Populated by StoreLocator.js -->
@@ -480,27 +560,33 @@
   ══════════════════════════════════════════════════════════ -->
   <section class="trust-section">
     <div class="trust-grid">
-      <div class="section-header"><h2 class="section-title">Why Choose Battlefront?</h2></div>
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Battlefront?</h2>
+      </div>
       <div class="trust-cards">
         <div class="trust-card">
           <div class="trust-card-icon"><i class="ti ti-shield-check"></i></div>
           <h3>Battlefront Fix Warranty</h3>
-          <p>Every product we sell is covered under Battlefront Fix. Hassle-free walk-in service at all our branch locations.</p>
+          <p>Every product we sell is covered under Battlefront Fix. Hassle-free walk-in service at all our branch
+            locations.</p>
         </div>
         <div class="trust-card">
           <div class="trust-card-icon"><i class="ti ti-truck"></i></div>
           <h3>Express 4-Hour Delivery</h3>
-          <p>Negros customers enjoy same-day express delivery. Order before 12NN, receive your order by 4PM. Tracked via our real-time delivery portal.</p>
+          <p>Negros customers enjoy same-day express delivery. Order before 12NN, receive your order by 4PM. Tracked via
+            our real-time delivery portal.</p>
         </div>
         <div class="trust-card">
           <div class="trust-card-icon"><i class="ti ti-currency-peso"></i></div>
           <h3>Price Match Promise</h3>
-          <p>Found the same item at an official store for less? Show us proof and we will match the price immediately — no questions asked.</p>
+          <p>Found the same item at an official store for less? Show us proof and we will match the price immediately —
+            no questions asked.</p>
         </div>
         <div class="trust-card">
           <div class="trust-card-icon"><i class="ti ti-star"></i></div>
           <h3>Battlefront Loyalty Rewards</h3>
-          <p>Earn Battlefront Points on every purchase. Use them as cash discounts on your next order. Gold and Platinum tiers unlock free shipping and priority support.</p>
+          <p>Earn Battlefront Points on every purchase. Use them as cash discounts on your next order. Gold and Platinum
+            tiers unlock free shipping and priority support.</p>
         </div>
       </div>
     </div>
@@ -513,10 +599,12 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo" style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-          <img src="battlefronticon.png" alt="Battlefront Computer Trading" style="height:48px;width:48px;object-fit:contain;border-radius:50%;">
+          <img src="assets/icons/battlefronticon.png" alt="Battlefront Computer Trading"
+            style="height:48px;width:48px;object-fit:contain;border-radius:50%;">
           <span>BATTLEFRONT</span>
         </div>
-        <p class="footer-tagline">Your trusted PC partner in the Philippines. Legit products, real warranties, fast delivery.</p>
+        <p class="footer-tagline">Your trusted PC partner in the Philippines. Legit products, real warranties, fast
+          delivery.</p>
         <div class="social-links">
           <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
           <a href="#" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
@@ -551,7 +639,8 @@
         <p><i class="ti ti-mail"></i> support@battlefront.com.ph</p>
         <p><i class="ti ti-phone"></i> (034) 434-8888</p>
         <p><i class="ti ti-clock"></i> Mon–Sat, 8AM–6PM</p>
-        <div style="margin-top:4px;font-size:13px;color:#BDC3C7;margin-bottom:4px;">Subscribe for deals & new arrivals</div>
+        <div style="margin-top:4px;font-size:13px;color:#BDC3C7;margin-bottom:4px;">Subscribe for deals & new arrivals
+        </div>
         <div class="newsletter-wrap">
           <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email for newsletter">
           <button class="newsletter-btn">Subscribe</button>
@@ -577,7 +666,8 @@
       <button class="auth-close-btn" data-auth-close aria-label="Close"><i class="ti ti-x"></i></button>
 
       <div class="auth-brand">
-        <img src="battlefronticon.png" alt="BCT" style="height:40px;width:40px;border-radius:50%;object-fit:contain;">
+        <img src="assets/icons/battlefronticon.png" alt="BCT"
+          style="height:40px;width:40px;border-radius:50%;object-fit:contain;">
         <span>BATTLEFRONT</span>
       </div>
 
@@ -592,12 +682,14 @@
         <form id="loginForm" novalidate>
           <div class="form-group">
             <label class="form-label" for="loginEmail">Email Address</label>
-            <input class="form-input" type="email" id="loginEmail" name="email" placeholder="you@email.com" required autocomplete="email">
+            <input class="form-input" type="email" id="loginEmail" name="email" placeholder="you@email.com" required
+              autocomplete="email">
           </div>
           <div class="form-group">
             <label class="form-label" for="loginPassword">Password</label>
             <div class="form-input-wrap">
-              <input class="form-input" type="password" id="loginPassword" name="password" placeholder="••••••••" required autocomplete="current-password">
+              <input class="form-input" type="password" id="loginPassword" name="password" placeholder="••••••••"
+                required autocomplete="current-password">
               <i class="ti ti-eye input-eye" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
             </div>
           </div>
@@ -626,12 +718,14 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="regEmail">Email Address</label>
-            <input class="form-input" type="email" id="regEmail" name="reg_email" placeholder="you@email.com" required autocomplete="email">
+            <input class="form-input" type="email" id="regEmail" name="reg_email" placeholder="you@email.com" required
+              autocomplete="email">
           </div>
           <div class="form-group">
             <label class="form-label" for="regPassword">Password</label>
             <div class="form-input-wrap">
-              <input class="form-input" type="password" id="regPassword" name="reg_password" placeholder="Min. 8 characters" required autocomplete="new-password">
+              <input class="form-input" type="password" id="regPassword" name="reg_password"
+                placeholder="Min. 8 characters" required autocomplete="new-password">
               <i class="ti ti-eye input-eye" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
             </div>
           </div>
@@ -674,8 +768,7 @@
     <div class="chatbot-messages" id="chatMessages" aria-live="polite" aria-atomic="false"></div>
     <div class="chat-quick-replies" id="chatQuickReplies"></div>
     <div class="chatbot-input-area">
-      <input type="text" class="chatbot-input" id="chatbotInput"
-        placeholder="Ask about products, builds, stores…"
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask about products, builds, stores…"
         aria-label="Chat message" maxlength="500">
       <button class="chatbot-send" id="chatbotSendBtn" aria-label="Send message">
         <i class="ti ti-send"></i>
@@ -708,4 +801,5 @@
   <script src="js/App.js"></script>
 
 </body>
+
 </html>
