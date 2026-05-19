@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
   --color-bg: #121212;
   --color-surface: #1E1E1E;
@@ -1408,7 +1410,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: gap;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
